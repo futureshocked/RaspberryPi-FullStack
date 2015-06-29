@@ -43,6 +43,8 @@ def lab_env_db():
 												from_date 		= from_date_str, 
 												to_date 		= to_date_str,
 												temp_items 		= len(temperatures),
+												query_string	= request.query_string, #This query string is used
+																						#by the Plotly link
 												hum_items 		= len(humidities))
 
 def get_records():
