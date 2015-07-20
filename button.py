@@ -1,3 +1,47 @@
+/*
+
+FILE NAME
+button.py
+
+1. WHAT IT DOES
+Reads the status of a button using a Raspberry Pi.
+ 
+2. REQUIRES
+* Any Raspberry Pi
+* A pushbutton
+* A 10kOhm resistor
+* Jumper wires
+* A breadboard
+
+3. ORIGINAL WORK
+Raspberry Full stack 2015, Peter Dalmaris
+
+4. HARDWARE
+D08: Button
+
+5. SOFTWARE
+Command line terminal
+Simple text editor
+Libraries:
+import RPi.GPIO as GPIO
+
+6. WARNING!
+None
+
+7. CREATED 
+
+8. TYPICAL OUTPUT
+Button status in the command line terminal.
+
+ // 9. COMMENTS
+--
+
+ // 10. END
+
+*/
+
+
+
 import RPi.GPIO as GPIO   ## Import GPIO Library
  
 inPin = 8                 ## Switch connected to pin 8
