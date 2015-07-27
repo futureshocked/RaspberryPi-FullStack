@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-/*
+'''
 
 FILE NAME
 env_log.py
@@ -41,7 +41,7 @@ No text output. Two new records are inserted in the database when the script is 
 
  // 10. END
 
-*/
+'''
 
 
 
