@@ -1,4 +1,4 @@
-/*
+'''
 
 FILE NAME
 blinky.py
@@ -38,7 +38,7 @@ LED blinks
 
  // 10. END
 
-*/
+'''
 
 import RPi.GPIO as GPIO         ## Import GPIO Library
 import time                     ## Import 'time' library (for 'sleep')
