@@ -1,5 +1,50 @@
 #!/usr/bin/env python
 
+/*
+
+FILE NAME
+env_log.py
+
+1. WHAT IT DOES
+Takes a reading from a DHT sensor and records the values in an SQLite3 database using a Raspberry Pi.
+ 
+2. REQUIRES
+* Any Raspberry Pi
+* A DHT sensor
+* A 10kOhm resistor
+* Jumper wires
+
+3. ORIGINAL WORK
+Raspberry Full stack 2015, Peter Dalmaris
+
+4. HARDWARE
+D17: Data pin for sensor
+
+5. SOFTWARE
+Command line terminal
+Simple text editor
+Libraries:
+import sqlite3
+import sys
+import Adafruit_DHT
+
+6. WARNING!
+None
+
+7. CREATED 
+
+8. TYPICAL OUTPUT
+No text output. Two new records are inserted in the database when the script is executed
+
+ // 9. COMMENTS
+--
+
+ // 10. END
+
+*/
+
+
+
 import sqlite3
 import sys
 import Adafruit_DHT
