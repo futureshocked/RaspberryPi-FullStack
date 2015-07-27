@@ -1,4 +1,4 @@
-/*
+'''
 
 FILE NAME
 hello_v2.py
@@ -36,7 +36,7 @@ A web page
 
  // 10. END
 
-*/
+'''
 
 
 
