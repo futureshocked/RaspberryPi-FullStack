@@ -1,4 +1,4 @@
-/*
+'''
 
 FILE NAME
 button.py
@@ -38,7 +38,7 @@ Button status in the command line terminal.
 
  // 10. END
 
-*/
+'''
 
 
 

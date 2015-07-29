@@ -1,4 +1,4 @@
-/*
+'''
 
 FILE NAME
 hello.py
@@ -34,7 +34,7 @@ A simple web page served by this flask application in the user's browser.
 
  // 10. END
 
-*/
+'''
 
 
 from flask import Flask
