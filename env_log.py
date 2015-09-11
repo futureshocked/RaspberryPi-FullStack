@@ -63,6 +63,12 @@ def log_values(sensor_id, temp, hum):
 	conn.close()
 
 humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.AM2302, 17)
+# If you don't have a sensor but still wish to run this program, comment out all the 
+# sensor related lines, and uncomment the following lines (these will produce random
+# numbers for the temperature and humidity variables):
+# import random
+# humidity = random.randint(1,100)
+# temperature = random.randint(10,30)
 if humidity is not None and temperature is not None:
 	log_values("1", temperature, humidity)	
 else:
