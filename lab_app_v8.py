@@ -1,3 +1,48 @@
+'''
+FILE NAME
+lab_app.py
+Version 8
+
+1. WHAT IT DOES
+This version passes the date/time strings to the template.
+ 
+2. REQUIRES
+* Any Raspberry Pi
+
+3. ORIGINAL WORK
+Raspberry Full Stack 2015, Peter Dalmaris
+
+4. HARDWARE
+* Any Raspberry Pi
+* DHT11 or 22
+* 10KOhm resistor
+* Breadboard
+* Wires
+
+5. SOFTWARE
+Command line terminal
+Simple text editor
+Libraries:
+from flask import Flask, request, render_template, sqlite3
+
+6. WARNING!
+None
+
+7. CREATED 
+
+8. TYPICAL OUTPUT
+A simple web page served by this flask application in the user's browser.
+The page contains the current temperature and humidity.
+A second page that displays historical environment data from the SQLite3 database.
+The historical records can be selected by specifying a date range in the request URL.
+The user can now click on one of the date/time buttons to quickly select one of the available record ranges.
+The user can use Jquery widgets to select a date/time range.
+
+ // 9. COMMENTS
+--
+ // 10. END
+'''
+
 from flask import Flask, request, render_template
 import time
 import datetime
@@ -13,7 +58,7 @@ def hello():
 def lab_temp():
 	import sys
 	import Adafruit_DHT
-	humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.AM2302, 4)
+	humidity, temperature = Adafruit_DHT.read_retry(Adafruit_DHT.AM2302, 17)
 	if humidity is not None and temperature is not None:
 		return render_template("lab_temp.html",temp=temperature,hum=humidity)
 	else:
@@ -25,11 +70,11 @@ def lab_env_db():
 	#return render_template("lab_env_db.html",temp=temperatures,hum=humidities)
 	#return render_template("lab_env_db.html",temp 	= temperatures,hum= humidities,	temp_items= len(temperatures),hum_items= len(humidities))
 	return render_template(	"lab_env_db.html", 	temp 			= temperatures,
-												hum 			= humidities,
-												from_date 		= from_date_str, 
-												to_date 		= to_date_str,
-												temp_items 		= len(temperatures),
-												hum_items 		= len(humidities))
+							hum 			= humidities,
+							from_date 		= from_date_str, 
+							to_date 		= to_date_str,
+							temp_items 		= len(temperatures),
+							hum_items 		= len(humidities))
 	
 def get_records():
 	from_date_str 	= request.args.get('from',time.strftime("%Y-%m-%d 00:00")) #Get the from date value from the URL
