@@ -18,7 +18,7 @@ sqlite> select * from temperatures;
 
 #Create another table
 sqlite> begin;
-sqlite> create table humidities (rDatetime datetime, sensorID text, temp numeric);
+sqlite> create table humidities (rDatetime datetime, sensorID text, hum numeric);
 sqlite> insert into humidities values (datetime(CURRENT_TIMESTAMP),"1",51);
 sqlite> insert into humidities values (datetime(CURRENT_TIMESTAMP),"1",51.10);
 sqlite> commit;
