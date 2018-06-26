@@ -189,7 +189,7 @@ def to_plotly():
 				        autorange=True
 				    ),
 				    yaxis=YAxis(
-				    	title='Celcius',
+				    	title='Celsius',
 				        type='linear',
 				        autorange=True
 				    ),
