@@ -49,7 +49,7 @@ app.debug = True # Make this False if you are no longer debugging
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+	return "Hello World!"
 
 @app.route("/lab_temp")
 def lab_temp():
@@ -64,7 +64,7 @@ def lab_temp():
 @app.route("/lab_env_db", methods=['GET']) 
 def lab_env_db():
 	from_date_str 	= request.args.get('from',time.strftime("%Y-%m-%d 00:00")) #Get the from date value from the URL
- 	to_date_str 	= request.args.get('to',time.strftime("%Y-%m-%d %H:%M"))   #Get the to date value from the URL
+	to_date_str 	= request.args.get('to',time.strftime("%Y-%m-%d %H:%M"))   #Get the to date value from the URL
 	import sqlite3
 	conn=sqlite3.connect('/var/www/lab_app/lab_app.db')
 	curs=conn.cursor()
@@ -81,4 +81,4 @@ def lab_env_db():
 	return render_template("lab_env_db.html",temp=temperatures,hum=humidities)
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080)
+	app.run(host='0.0.0.0', port=8080)
